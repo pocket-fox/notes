@@ -1,2 +1,3 @@
 [language-server.tinymist]
+command = "tinymist"
 config = { exportPdf = "onType", outputPath = "$dir/$name", typstExtraArgs = ["--root ~/Documents/PocketVault/"] }
