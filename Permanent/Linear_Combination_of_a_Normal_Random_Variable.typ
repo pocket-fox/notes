@@ -1,13 +1,22 @@
 #import "/templates/permanent.typ": *
 #show: style
 
-= 5.10 Linear Combinations of Independent Random Variables
+== Linear Combination of a Normal Random Variable
 
-Let $Y = c_1 X_1 + c_2 X_2 + dots.c + $ //TODO: finish this line
+Following from the linearity of linear functions of normal random variables, linear combinations of
+a collection of independent normal random variables are also normally distributed.
 
-This simply states that if you have a normal distribution $X$, then its mean $mu$ and variance $sigma$ are also normally distributed.
+Given some distribution $Y$, defined as a linear combination of $n$ independent and normally
+distributed random variables $X_n$, that is $Y$ takes the form $Y = c_1 X_1 + c_2 X_2 + dots + c_n X_n$,
+then $Y$ can be defined as:
+$
+  Y tilde.op N(c_1 mu_1 + c_2 mu_2 + dots + c_n mu_n, c_1 sigma_1 + c_2 sigma_2 + dots + c_n sigma_n)
+$
 
-====== Example:\
+//TODO: finish note
+
+====== Example:
+
 The lengths of certain rods are normally distributed with a mean of 250 mm and a standard deviation of 0.6 mm. Four rods are randomly selected and joined end-to-end to be fitted into a sleeve. (The rods are assumed to be independent of one another.)
 
 a. If a sleeve has length 1002.5 mm, what is the probability that an assembly of rods will fit into the sleeve.
@@ -50,3 +59,8 @@ $
   ZZ_90 &= 1.28\
    l_90 &= 250 + 1.28(0.6)\
 $
+
+#hide[
+  = Related
+  #link("Linear_Combination_of_a_Random_Variable.typ")[Linear_Combination_of_a_Random_Variable]
+]

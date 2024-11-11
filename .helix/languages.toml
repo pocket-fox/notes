@@ -1,3 +1,9 @@
 [language-server.tinymist]
 command = "tinymist"
 config = { exportPdf = "onType", outputPath = "$dir/$name", typstExtraArgs = ["--root ~/Documents/PocketVault/"] }
+
+[[language]]
+name = "typst"
+auto-format = true
+formatter = { command = "typstyle", args = [ "-c 100" ] }
+language-servers = [ "tinymist" ]
