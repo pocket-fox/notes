@@ -1,6 +1,8 @@
 #import "/templates/permanent.typ": *
 #show: style
 
++ Author: Munger
+
 = The Sharing Economy
 
 #quote(attribution:[page 391])[

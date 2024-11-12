@@ -1,6 +1,8 @@
 #import "/templates/permanent.typ": *
 #show: style
 
++ Author: Haidt
+
 = The Emotional Dog
 
 #quote(attribution:[page 2])[
