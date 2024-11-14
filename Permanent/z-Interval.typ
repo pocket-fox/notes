@@ -1,7 +1,7 @@
 #import "/templates/permanent.typ": *
 #show: style
 
-= Z-Interval
+= z-Interval
 
 A methodology for constructing a *confidence interval* for the *mean* of a distribution when the
 *standard deviation* is known.
