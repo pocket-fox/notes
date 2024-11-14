@@ -3,20 +3,20 @@
 
 = Bernoulli Distribution
 
-A Bernoulli trial is an experiment that has only 2 possible outcomes. These outcomes historically have special names: _success_ and _failure_; however, the names have no bearing on which outcome recieves which label.
+A Bernoulli trial is an experiment that has only 2 possible outcomes, imagine flipping a coin. These outcomes historically have special names: _success_ and _failure_; however, the names have no bearing on which outcome recieves which label.
 
-Bernoulli random variables serve to map the results of a Bernoulli trial from the sample space of outcomes to some set of *real numbers*. Let $X$ be some random variable defined on a Bernoulli trial, such that $X = 1$, if a trial is a success, anc $X = 0$ if it is a failure. We say $X$ is Bernoulli random variable, and it is written:
+Let $X$ be some random variable, such that $X = 1$, if a trial is a success, and $X = 0$ if it is a failure. We say $X$ is Bernoulli random variable, and it is written:
 $
   X tilde.op "Bernoulli"(p)\
   "where" p "is the probability of success"
 $
 
-== Distribution Table (_pmf_)
+== Probability Mass Function
 
-#table(columns:4,
-  [$X$], [$p_i$],     [$X dot p_i$], [$X^2 dot p_i$],
-  [$0$], [$1 - p_i$], [$0$],         [$0$],      
-  [$1$], [$p_i$],     [$p_i$],       [$p_i$],      
+#table(columns:2,
+  [$x$], [$p(x)$],
+  [$0$], [$1 - p$],
+  [$1$], [$pi$],
 )
 
 == Mean

@@ -4,9 +4,9 @@
 = Resistance Money
 
 == Author(s):
-+ Bailey
-+ Rettler
-+ Warmke
++ Andrew M. Bailey
++ Bradley Rettler
++ Craig Warmke
 
 === Quotes
 
@@ -81,6 +81,17 @@ legislation. I agree that such a system would be less effective than an algorith
 however, it seems to be the case that we DON'T want to implement such a law.
 
 
+#quote(attribution:[page 11])[
+  Anyone who’d like to build your dossier from your bitcoin behavior has
+  to work much harder to do so.
+]
+
+The framework for this is already in place, advertising companies already have the capability to
+track their audience without direct information on the user. In fact I believe they actually
+prefer to track this way nowadays because its based purely on your economic behavior, the thing
+they are most concerned with.
+
+
 #quote(attribution:[page 10])[
   Bitcoin also does away with makers in an important sense. The Federal Reserve updates its
   projections and policies frequently. On a near-monthly basis, millions tune in for the
@@ -94,3 +105,27 @@ a stable economy enables greater levels of free trade, which then enables more e
 distribution of goods. The first person to develop the foolproof algorithm for managing inflation
 and global economic stablitity is likely in line for a nobel peace prize and a place in history
 more flattering than Einstein or Napolean.
+
+
+#quote(attribution:[page 11])[
+  ...bitcoin is what it says on the box: digital cash.
+]
+
+...with the caviat that if someone can manage to gain 51% share of the current mining
+space, they gain absolute control over all transactions, something no modern economic institution
+could ever manage
+
+
+=== Conclusion
+
+The core argument being levied here is that the world is better off with than without
+cryptocurrency. This is a moot point, as I mentioned earlier, it is physically inconcievable to do
+away with any cryptocurrency. Additionally, so long as there exists a group of people to whom a
+cryptocurrency holds value, that cryptocurrency will hold value. Whether one should invest in or
+venture to acquire cryptocurrency is a far more interesting philisophical question in my eyes.
+Given that I agree with the author in saying that cryptocurrency is a highly effective tool for the
+oppressed, it seems the case that one ought to contribute to its continued existence. However, it
+is also the case that the more effective a cryptocurrency is at functioning as a tool of the
+oppressed, the less useful the currency is as global society progressess (assuming we agree that
+oppression tends downward through time). As a result, investing in cryptocurrency can be seen
+almost as a form of altruism, though at present it is can be used to make profit.

@@ -3,7 +3,7 @@
 
 = Geometric Distribution
 
-Supposing $X$ is the number of independent *Bernoulli trials* up to and including the $1^"st"$ success. Then $X$ has a geometric distribution. This is written:
+Supposing $X$ is the number of independent *Bernoulli trials* up to and including the $1^"st"$ success, then $X$ has a geometric distribution. We are counting the number of coin flips until a success. This is written:
 $
   X tilde.op "Geom"(p)\
   "with probability mass function"\
@@ -22,15 +22,11 @@ This distribution has the following *contingency table*:
 )
 
 == Mean
-
-The mean of a geometric distribution can be found using the series $sum_(x=1)^oo x_i p(1 - p)^(x - 1)$ and is given by the formula:
 $
   mu_X = 1/p
 $
 
 == Variance
-
-The variance of a geometric distribution can be found using the series $sum_(x = 1)^oo p(1 - p)^(x - 1)$ and is given by the formula:
 $
   sigma_X^2 = (1 - p)/p^2
 $

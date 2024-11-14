@@ -3,14 +3,16 @@
 
 = Binomial Distribution
 
-For an *experiment* to qualify as binomial, it must meet _all_ the following conditions:
+A binomial distribution is a series of Bernoulli trials, that is, a series of coin flips with a constant probability for each outcome, where we are counting the number of successes. For an *experiment* to officially qualify as binomial, it must meet _all_ the following conditions:
 
 1. Fixed number of trials ($n$)
 2. Each trial must result in either a success or failure (each experiment must be *Bernoulli trial*)
 3. Success rate per trial is constant ($p$)
 4. Trials must be independent
 
-A *binomial random variable* is defined as follows: Let $Y$ be the number of successes in a binomial experiment. Then $Y$ is a binomial random variable with parameters $n$, being the number of trials, and $p$, being the probability of any particular expermient resulting in success; and can be written:
+== Probability Mass Function
+
+A *binomial random variable* is defined as follows: Let $Y$ describe the number of successes in a binomial experiment. Then $Y$ is a binomial random variable with parameters $n$, being the number of trials, $y$, the number of successes (or desired success), and $p$, the probability of any particular expermient resulting in success; and can be written:
 $
   Y tilde.op "Bin"(n, p)\
   \
@@ -69,17 +71,6 @@ Then $Y tilde.op "Bin"(12, 0.25)$
 $
   P(Y = 4) &= 12!/(4!8!) (0.25)^4 (0.75)^8\
            &= 0.1935777068
-$
-
-2. What is the probability that _at most_ 4 are republican?
-$
-  P(Y <= 4) &= sum_(i=0)^4 P(Y = i)
-$
-#align(center)[or]
-$
-  &= F(4)\
-  &= ...
-  //TODO: finish the '...'
 $
 
 == Mean

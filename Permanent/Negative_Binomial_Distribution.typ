@@ -3,10 +3,14 @@
 
 = Negative Binomial Distribution
 
-Suppose $X$ is the number of *independent* *Bernoulli trials* up to and including the $r^"th"$ success, then $Y$ is a negative binomial distribution written:
+A coin is tossed until $r$ successes are observed, this can be seen as a counterpart to the binomial distribution. Suppose $X$ is the number of *independent* *Bernoulli trials* up to and including the $r^"th"$ success, then $Y$ is a negative binomial distribution written:
 $
   Y tilde.op "NB"(r, p)\
-  "with probability mass function"\
+$
+
+== Probability Mass Function
+
+$
   P(Y = y) = mat(y - 1; r - 1) p^r (1 - p)^(y - r)
 $
 
