@@ -63,16 +63,16 @@
   [*git show HEAD~0:file* #check()\
   Show the contents of 'file' on HEAD~0 (the most up to date HEAD).],
   
-  [*git log* #cross()\
+  [*git log* #check()\
   Show commit history.],
   
   [*git log \--oneline* #check()\
   Show abbreviated commit history.],
   
-  [*git diff* #cross()\
+  [*git diff* #check()\
   Show all differences between working tree and staging.],
   
-  [*git diff \--staged* #cross()\
+  [*git diff \--staged* #check()\
   Show all differences between staging and a target branch; however, the default target is the current HEAD. \
   (technically \--staged is an alias for \--cached).],
   
@@ -82,19 +82,19 @@
   [*git diff HEAD~0* #check()\
   Shows differences between working tree and current HEAD.],
   
-  [*git reset \--soft HEAD\~2* #cross()\
-  Revert state of HEAD to HEAD\~2 (2 commits prior), retaining all differences between the current working tree and HEAD\~2 within staging.],
+  [*git reset \--soft HEAD\~2* #check()\
+  Change current HEAD to HEAD\~2 (2 commits prior). This will retain all commits that were made after the new HEAD in staging and will not touch the working tree.],
   
-  [*git reset \--mixed HEAD\~2* #cross()\
-  Revert the state of HEAD to HEAD\~2 (2 commits prior), retaining all differences between the current working tree and HEAD\~2 solely within the working tree.],
+  [*git reset \--mixed HEAD\~2* #check()\
+  Change current HEAD to HEAD\~2 (2 commits prior). This will delete all commits made after the new HEAD; however, the working tree will remain unchanged.],
   
-  [*git reset \--hard HEAD\~2* #cross()\
+  [*git reset \--hard HEAD\~2* #check()\
   Revert the state of HEAD to HEAD\~2 (2 commits prior), retaining no changes, thus resulting in the current working tree mirroring HEAD\~2.],
     
   [*git branch f1* #check()\
   Create a new branch named 'f1'.],
   
-  [*git switch f1* #cross()\
+  [*git switch f1* #check()\
   Switch to branch 'f1'.],
     
   [*git checkout -b f1* #check()\
@@ -113,15 +113,15 @@
   Push the current batch of commits to a temporary storage and revert the working tree to the current state of HEAD.],
   
   [*git stash apply* #check()\
-  Replays all stashed commits on top of the current working tree.],
+  Replays most recent stashed changes on top of the current working tree.],
   
-  [*git stash pop* #cross()\
-  Replays a single stashed commit on top of the working tree and removes that commit from the stash.],
+  [*git stash pop* #check()\
+  Replays a the most recent stashed changes on top of the working tree and removes that commit from the stash.],
   
-  [*git merge f1* #cross()\
+  [*git merge f1* #check()\
   Attempts to play all commits from branch 'f1' onto master branch.],
   
-  [*git merge \--squash f1* #cross()\
+  [*git merge \--squash f1* #check()\
   Combine all commits made to branch 'f1' into a single commit.],
   
   [*git rebase master* #check()\
@@ -133,7 +133,7 @@
   [*ssh-keygen -t rsa -b 4096 -C "sabevary\@csus.edu"* #check()\
   Generate a new 4096 bit ssh key using the rsa protocol and associate with it a comment that reads 'sabevary\@csus.edu'.],
   
-  [*eval "\$(ssh-agent -s)"* #cross()\
+  [*eval "\$(ssh-agent -s)"* #check()\
   Evaluate the output of 'ssh-agent -s' as if it were put into stdin. The output of 'ssh-agent -s' is a series of bourne shell commands that would set the ssh auth socket and pid.],
   
   [*ssh-add ~/.ssh/csus* #check()\
@@ -145,13 +145,13 @@
   [*git clone \<name of repository from github\>* #check()\
   Download a copy of a repository present at the provided location.],
   
-  [*git remote -v* #cross()\
-  List repositories associated with commands, i.e. what repository will git pull from be pulling from by default and git push will push to by default.],
+  [*git remote -v* #check()\
+  List repositories associated with commands, i.e. what repository will git pull from by default and git push will push to by default.],
   
   [*git remote rename origin csus* #check()\
   Rename the repo named 'origin' to 'csus'.],
   
-  [*git push -u csus f1* #cross()\
+  [*git push -u csus f1* #check()\
   Set the remote repo to push to for the 'f1' branch as the remote named 'csus'.],
   
   [*git log csus/main \--oneline* #check()\
@@ -163,10 +163,10 @@
   [*git fetch csus* #check()\
   Download a preview of the current state of the remote named 'csus'.],
   
-  [*git merge csus/main* #cross()\
+  [*git merge csus/main* #check()\
   Attempt to replay all commits from the working tree onto the 'main' branch of the 'csus' repo. Halt when encountering a merge conflict.],
   
-  [*git pull csus main* #cross()\
+  [*git pull csus main* #check()\
   Pull any changes from 'main' branch of 'csus' repo.],
   
 )
