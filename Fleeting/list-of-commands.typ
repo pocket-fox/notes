@@ -39,133 +39,134 @@
   [*git status* #check()\
   Return the difference between your working local files and the current tracked repo to stdout.],
   
-  [*git status -status* #cross()\
-  ???],
+  [*git status -s* #check()\
+  Shows the git status in an abbreviated format.],
   
-  [*git show :a*\
-  ],
+  [*git show :a* #check()\
+  Shows the currently tracked version of file 'a'.],
   
-  [*git ls-files*\
-  ],
+  [*git ls-files* #check()\
+  Recursively list tracked files in the current directory.],
   
-  [*git rm file \--cached*\
-  ],
+  [*git rm file \--cached* #check()\
+  Removes 'file' from staging.],
   
-  [*git mv file newName*\
-  ],
+  [*git mv file newName* #check()\
+  Renames 'file' to 'newName'.],
   
-  [*git checkout file*\
-  ],
+  [*git checkout file* #check()\
+  Replaces 'file' in working tree with 'file' from staging.],
   
-  [*git commit -m "comment"*\
-  ],
+  [*git commit -m "comment"* #check()\
+  Commits currently staged changes to the working branch with "comment" as the cmmit summary.],
   
-  [*git show HEAD~0:file*\
-  ],
+  [*git show HEAD~0:file* #check()\
+  Show the contents of 'file' on HEAD~0 (the most up to date HEAD).],
   
-  [*git log*\
-  ],
+  [*git log* #cross()\
+  Show commit history.],
   
-  [*git log \--oneline*\
-  ],
+  [*git log \--oneline* #check()\
+  Show abbreviated commit history.],
   
-  [*git diff*\
-  ],
+  [*git diff* #cross()\
+  Show all differences between working tree and staging.],
   
-  [*git diff \--staged*\
-  ],
+  [*git diff \--staged* #cross()\
+  Show all differences between staging and a target branch; however, the default target is the current HEAD. \
+  (technically \--staged is an alias for \--cached).],
   
-  [*git diff \--cached*\
-  ],
+  [*git diff \--cached* #check()\
+  Show all differences between staging and a target branch; however, the default target is the current HEAD.],
   
-  [*git diff HEAD~0*\
-  ],
+  [*git diff HEAD~0* #check()\
+  Shows differences between working tree and current HEAD.],
   
-  [*git reset \--soft HEAD~2*\
-  ],
+  [*git reset \--soft HEAD\~2* #cross()\
+  Revert state of HEAD to HEAD\~2 (2 commits prior), retaining all differences between the current working tree and HEAD\~2 within staging.],
   
-  [*git reset \--mixed HEAD~2*\
-  ],
+  [*git reset \--mixed HEAD\~2* #cross()\
+  Revert the state of HEAD to HEAD\~2 (2 commits prior), retaining all differences between the current working tree and HEAD\~2 solely within the working tree.],
   
-  [*git reset ~~hard HEAD~2*\
-  ],
+  [*git reset \--hard HEAD\~2* #cross()\
+  Revert the state of HEAD to HEAD\~2 (2 commits prior), retaining no changes, thus resulting in the current working tree mirroring HEAD\~2.],
+    
+  [*git branch f1* #check()\
+  Create a new branch named 'f1'.],
   
-  [*git branch f1*\
-  ],
+  [*git switch f1* #cross()\
+  Switch to branch 'f1'.],
+    
+  [*git checkout -b f1* #check()\
+  Create a new branch named 'f1' and then switch to it.],
   
-  [*git switch f1*\
-  ],
+  [*git show f1:one* #check()\
+  Shows the state of the file named 'one' on branch 'f1'.],
   
-  [*git checkout -b f1*\
-  ],
+  [*git show HEAD~0:one* #check()\
+  Shows the state of the file 'one' on the current HEAD.],
   
-  [*git show f1:one*\
-  ],
+  [*git stash list* #check()\
+  List the commits present the stash.],
   
-  [*git show HEAD~0:one*\
-  ],
+  [*git stash save* #check()\
+  Push the current batch of commits to a temporary storage and revert the working tree to the current state of HEAD.],
   
-  [*git stash list*\
-  ],
+  [*git stash apply* #check()\
+  Replays all stashed commits on top of the current working tree.],
   
-  [*git stash save*\
-  ],
+  [*git stash pop* #cross()\
+  Replays a single stashed commit on top of the working tree and removes that commit from the stash.],
   
-  [*git stash apply*\
-  ],
+  [*git merge f1* #cross()\
+  Attempts to play all commits from branch 'f1' onto master branch.],
   
-  [*git stash pop*\
-  ],
+  [*git merge \--squash f1* #cross()\
+  Combine all commits made to branch 'f1' into a single commit.],
   
-  [*git merge f1*\
-  ],
+  [*git rebase master* #check()\
+  Point the root of the working tree at the current HEAD of master. Then replay all commits on top of the new HEAD as if merging.],
   
-  [*git merge \--squash f1*\
-  ],
+  [*git rebase \--continue* #check()\
+  Resume playing commits on top of the new root HEAD after having resolved merge conflicts.],
   
-  [*git rebase master*\
-  ],
+  [*ssh-keygen -t rsa -b 4096 -C "sabevary\@csus.edu"* #check()\
+  Generate a new 4096 bit ssh key using the rsa protocol and associate with it a comment that reads 'sabevary\@csus.edu'.],
   
-  [*git rebase \--continue*\
-  ],
+  [*eval "\$(ssh-agent -s)"* #cross()\
+  Evaluate the output of 'ssh-agent -s' as if it were put into stdin. The output of 'ssh-agent -s' is a series of bourne shell commands that would set the ssh auth socket and pid.],
   
-  [*ssh-keygen -t rsa -b 4096 -C "sabevary\@csus.edu"*\
-  ],
+  [*ssh-add ~/.ssh/csus* #check()\
+  Add a private key to your ssh-agents keyring.],
   
-  [*eval "\$(ssh-agent -s)"	*\
-  ],
+  [*ssh-add -l* #check()\
+  List private keys contained on your ssh-agents keyring.],
   
-  [*ssh-add ~/.ssh/csus*\
-  ],
+  [*git clone \<name of repository from github\>* #check()\
+  Download a copy of a repository present at the provided location.],
   
-  [*ssh-add -l*\
-  ],
+  [*git remote -v* #cross()\
+  List repositories associated with commands, i.e. what repository will git pull from be pulling from by default and git push will push to by default.],
   
-  [*git clone name of repository from github*\
-  ],
+  [*git remote rename origin csus* #check()\
+  Rename the repo named 'origin' to 'csus'.],
   
-  [*git remote -v*\
-  ],
+  [*git push -u csus f1* #cross()\
+  Set the remote repo to push to for the 'f1' branch as the remote named 'csus'.],
   
-  [*git remote rename origin csus*\
-  ],
+  [*git log csus/main \--oneline* #check()\
+  Show the commit history for the 'main' branch of the 'csus' repo.],
   
-  [*git push -u csus f1*\
-  ],
+  [*git show csus/main:file* #check()\
+  Show the contents of 'file' as it is on 'main' branch of the 'csus' repo.],
   
-  [*git log csus/main \--oneline*\
-  ],
+  [*git fetch csus* #check()\
+  Download a preview of the current state of the remote named 'csus'.],
   
-  [*git show csus/main:file*\
-  ],
+  [*git merge csus/main* #cross()\
+  Attempt to replay all commits from the working tree onto the 'main' branch of the 'csus' repo. Halt when encountering a merge conflict.],
   
-  [*git fetch csus*\
-  ],
-  
-  [*git merge csus/main*\
-  ],
-  
-  [*git pull csus mai,*\
-  ],
+  [*git pull csus main* #cross()\
+  Pull any changes from 'main' branch of 'csus' repo.],
   
 )
