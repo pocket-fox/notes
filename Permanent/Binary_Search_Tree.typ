@@ -3,7 +3,10 @@
 
 = Binary Search Tree
 
-A Binary search tree is a *linked list* based data structure that maintains a sorted structure and enables relatively fast insertions, deletions, and lookups. However, modern computers tend to perform better when data is stored with better *locality*, namely by using arrays.
+A Binary search tree is a *linked list* based data structure that maintains a
+sorted structure and enables relatively fast insertions, deletions, and lookups.
+However, modern computers tend to perform better when data is stored with better
+*locality*, namely by using arrays.
 
 == Implementation
 
@@ -138,7 +141,7 @@ public class BST{
 }
 ```
 #hide[
-  = Related
-  #link("Linked_List.typ")[Linked_List]
-  #link("Data_Locality.typ")[Data_Locality]
+    = Related
+    #link("Linked_List.typ")[Linked_List]
+    #link("Data_Locality.typ")[Data_Locality]
 ]

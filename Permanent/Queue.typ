@@ -1,17 +1,23 @@
 = Queue
 
-A Queue is a linear data structure wherein you exclusively add items to one end (the *tail*) and remove them from the other (the *head*). When implementing a Queue using an *array* you will end up having to move the head and tail so as to maintain accessable memory within the array. This concept is known as a *circular array*.
+A Queue is a linear data structure wherein you exclusively add items to one end
+(the *tail*) and remove them from the other (the *head*). When implementing a
+Queue using an *array* you will end up having to move the head and tail so as to
+maintain accessable memory within the array. This concept is known as a
+*circular array*.
 
-The tail should always point to the next available slot in any implementation. Queues preserve the order in which items are inserted, this means that items are automatically prioritized based on the their age.
-A queue can be implemented using either a *linked List* or an *array*.
+The tail should always point to the next available slot in any implementation.
+Queues preserve the order in which items are inserted, this means that items are
+automatically prioritized based on the their age. A queue can be implemented
+using either a *linked List* or an *array*.
 
 == Mandatory Funcionality
 
 1. void enqueue() (add)
-2. <E>  dequeue() (remove)
-3. <E>  peek()
+2. <E> dequeue() (remove)
+3. <E> peek()
 4. bool isEmpty()
-5. int  size()
+5. int size()
 6. void clear()
 
 == Fixed Implementation
@@ -149,7 +155,7 @@ public class Lqueue(){
 ```
 
 #hide[
-  = Related
-  #link("Linked_List.typ")[Linked_List]
-  #link("Array.typ")[Array]
+    = Related
+    #link("Linked_List.typ")[Linked_List]
+    #link("Array.typ")[Array]
 ]

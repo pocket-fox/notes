@@ -3,7 +3,8 @@
 
 = Communication
 
-Communication is a fundamental piece of organic life. Organisms communicate to further some goal. 
+Communication is a fundamental piece of organic life. Organisms communicate to
+further some goal.
 
 == Gricean Norms of Communication
 
