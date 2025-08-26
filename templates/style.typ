@@ -7,7 +7,7 @@
   // #set text(rgb("CDD6F4"))
   // #show: catppuccin.with(themes.mocha)
   // #set text(font: "Quicksand", weight: 450)
-  #set par(justify: true)
+  // #set par(justify: true)
   // #set table(
   //   stroke: none,
   //   gutter: 0.2em,

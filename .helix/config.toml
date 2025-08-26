@@ -1,0 +1,8 @@
+[keys.insert]
+"=" = { e = [":insert-output echo -n '====== Example:\\'", "append_mode"], E = [":insert-output echo -n '====== '", "append_mode"] }
+
+[keys.insert.'#']
+L = [":insert-output echo -n '#link(\";.typ\")[;]'", "normal_mode"]
+Q = [":insert-output echo -n '#quote(attribution:[;])[\n]'", "normal_mode"]
+'/' = [":insert-output echo -n '#check()'", "append_mode"]
+x = [":insert-output echo -n '#cross()'", "append_mode"]
